@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Saim Jamil</title>
+    <style>
+        :root {
+            --background-primary: radial-gradient(circle, #e8d2cc, #dbc1c4, #c9a7b3);
+            --background-secondary: radial-gradient(circle, #c4d7f2, #a9bedc, #8ca5c7);
+            --text-primary: #2f2e3d;
+            --text-secondary: #5e5c6f;
+            --accent: #d88ca4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background: var(--background-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .left {
+            background: var(--background-secondary);
+            color: var(--text-primary);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .left h2 {
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+        }
+
+        .left p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills ul li {
+            background-color: #f0f0f0;
+            border: 1px solid #d6d6d6;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .right {
+            background: white;
+            padding: 40px;
+        }
+
+        .right header h1 {
+            font-size: 2.3rem;
+            color: var(--text-primary);
+        }
+
+        .right header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+
+        .about,
+        .education,
+        .expertise {
+            margin-bottom: 30px;
+        }
+
+        .about h2,
+        .education h2,
+        .expertise h2 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .expertise ul {
+            list-style: none;
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .expertise ul li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .education .degree {
+            padding: 20px;
+            border-radius: 10px;
+            background: var(--background-primary);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .education .degree:hover {
+            transform: scale(1.03);
+        }
+
+        .education .degree h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .education .degree p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="left">
+            <section class="contact-info">
+                <h2>Contact</h2>
+                <p><b>Phone:</b> +92 300 8143667</p>
+                <p><b>Email:</b> venom.saim03@gmail.com</p>
+                <p><b>Address:</b> Tehsil Habibabad, District Pattoki</p>
+            </section>
+
+            <section class="social-media">
+                <h2>Societies</h2>
+                <p>Humanity Still Exists</p>
+                <p>Blood Donor Society</p>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>MS Office</li>
+                    <li>Web Development</li>
+                    <li>OOP</li>
+                    <li>Database Design</li>
+                    <li>Communication</li>
+                    <li>Team Collaboration</li>
+                    <li>Problem-Solving</li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="right">
+            <header>
+                <h1>Saim Jamil</h1>
+                <p>Bachelor in Software Engineering (Ongoing)</p>
+            </header>
+
+            <section class="about">
+                <h2>About Me</h2>
+                <p>I am a dedicated BSSE student at COMSATS University Lahore. Alongside my academic journey, I actively
+                    engage in community service through various social initiatives. With a strong foundation in software
+                    engineering principles, I excel at critical thinking and teamwork, and I am passionate about
+                    leveraging technology to solve real-world challenges. My goal is to continuously grow and contribute
+                    to meaningful projects that make a difference.</p>
+            </section>
+
+            <section class="expertise">
+                <h2>Expertise</h2>
+                <ul>
+                    <li><b>MS Office:</b> Proficient in Word, Excel, and PowerPoint for professional documentation and
+                        presentations.</li>
+                    <li><b>Adobe Photoshop:</b> Skilled in graphic design and photo editing for creative projects.</li>
+                    <li><b>Web Development:</b> Experienced in building responsive and interactive websites using HTML,
+                        CSS, JavaScript, and frameworks like Node.js.</li>
+                    <li><b>OOP:</b> Strong foundation in Object-Oriented Programming concepts for modular and scalable
+                        software development.</li>
+                    <li><b>Database:</b> Competent in database design, querying, and management using tools like SQL
+                        Server and MySQL.</li>
+                </ul>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <div class="degree">
+                    <h3>COMSATS University</h3>
+                    <p>Bachelors in Software Engineering (Ongoing)</p>
+                </div>
+                <div class="degree">
+                    <h3>Aspire College Pattoki</h3>
+                    <p>FSc (Pre-Medical)</p>
+                </div>
+                <div class="degree">
+                    <h3>The Educators Pattoki</h3>
+                    <p>Matriculation</p>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

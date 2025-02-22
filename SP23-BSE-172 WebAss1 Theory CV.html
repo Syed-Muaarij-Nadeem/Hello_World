@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Warda Saeed</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6a5af9 0%, #a9c6ff 100%);
+            --secondary-gradient: linear-gradient(to right, #ff8a5b 0%, #ff5f6d 100%);
+            --background-gradient: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+            --text-primary: #ffffff;
+            --text-secondary: #d0d7de;
+            --card-bg: #2a3b4f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background-gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-gradient);
+        }
+
+        header h1 {
+            font-size: 36px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+        }
+
+        header p a {
+            color: var(--primary-gradient);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header p a:hover {
+            color: var(--secondary-gradient);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section ul li,
+        section div {
+            background: #34495e;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+        }
+
+        section ul li:hover,
+        section div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        section ul li strong,
+        section div h3 {
+            color: var(--primary-gradient);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .experience-details em {
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .experience-details p {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>Warda Saeed</h1>
+            <p>
+                📞 0323-1021387 | 📧 <a href="mailto:wardasaeed1122@gmail.com">wardasaeed1122@gmail.com</a>
+            </p>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>BS Software Engineering</strong>
+                    <p>Currently Pursuing</p>
+                </li>
+                <li>
+                    <strong>Intermediate</strong>
+                    <p>Completed</p>
+                </li>
+                <li>
+                    <strong>Matriculation</strong>
+                    <p>Completed</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>HTML & CSS</strong></li>
+                <li><strong>JavaScript</strong></li>
+                <li><strong>Problem Solving</strong></li>
+                <li><strong>Team Collaboration</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="experience-details">
+                <h3>Intern - XYZ Software Company</h3>
+                <em>June 2023 - August 2023</em>
+                <p>Assisted in front-end development, working with the team to create responsive websites using HTML,
+                    CSS, and JavaScript.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Portfolio Website</strong>
+                    <p>A personal portfolio created using HTML, CSS, and JavaScript</p>
+                </li>
+                <li>
+                    <strong>Hotel Management System</strong>
+                    <p>Developed a basic hotel booking and billing system as a university project</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

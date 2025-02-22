@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Syed Muaarij Nadeem</title>
+    <style>
+        :root {
+            --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --gradient-secondary: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background: var(--gradient-secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: slideIn 1s ease;
+        }
+
+        .left {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info,
+        .social-media {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p,
+        .social-media p {
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+            animation-delay: calc(var(--delay) * 0.1s);
+            display: flex;
+            align-items: center;
+        }
+
+        b {
+            display: block;
+        }
+
+        .social-media .social-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        .social-media p {
+            cursor: pointer;
+        }
+
+        .social-media p:hover {
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateX(10px);
+        }
+
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills ul li {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .skills ul li:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Rest of the previous CSS remains the same */
+        .right {
+            padding: 40px;
+            background-color: white;
+        }
+
+        .right header {
+            text-align: right;
+            margin-bottom: 40px;
+            border-bottom: 3px solid;
+            border-image: var(--gradient-primary);
+            border-image-slice: 1;
+            padding-bottom: 20px;
+        }
+
+        .right header h1 {
+            font-size: 3rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+
+        .right header p {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        .right section h2 {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .education .degree {
+            background: linear-gradient(to right, #f6f8f9 0%, #e5ebee 100%);
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .education .degree:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="left">
+            <section class="contact-info">
+                <h2>Contact</h2>
+                <p style="--delay: 1"><b class="contact">Phone:&nbsp;</b> +92 321 5927607</p>
+                <p style="--delay: 2"><b class="contact">Email:&nbsp</b> syedmuaarijnadeem@gmail.com</p>
+                <p style="--delay: 3"><b class="contact">Address:&nbsp</b>Street no.4, Shalimar Town, Kahna Nau,
+                    Ferozpur Road,
+                    Lahore
+                </p>
+            </section>
+
+            <section class="social-media">
+                <h2>Social Media</h2>
+                <p style="--delay: 4">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+                    </svg>
+                    Syed Muaarij Nadeem
+                </p>
+                <p style="--delay: 5">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441c.796 0 1.441-.645 1.441-1.441s-.645-1.441-1.441-1.441z" />
+                    </svg>
+                    @syed_muaarij_nadeem
+                </p>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li style="--delay: 6">Active Listening</li>
+                    <li style="--delay: 7">Problem-solving</li>
+                    <li style="--delay: 8">Patience and Empathy</li>
+                    <li style="--delay: 9">Multitasking</li>
+                    <li style="--delay: 10">Time Management</li>
+                    <li style="--delay: 11">Advanced Computer Operator</li>
+                    <li style="--delay: 12">Ability to Work Under Pressure</li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="right">
+            <header>
+                <h1>SYED MUAARIJ NADEEM</h1>
+                <p>Bachelors in Software Engineering</p>
+            </header>
+
+            <!-- Rest of the content remains the same as in the previous version -->
+            <section class="about">
+                <h2>About Me</h2>
+                <p>I am a passionate and motivated Software Engineering student with a strong foundation in computer
+                    science principles, programming, and problem-solving. I have hands-on experience in developing web
+                    and mobile applications, writing clean and efficient code, and collaborating on team projects. I am
+                    particularly interested in full-stack development, cloud computing, and data-driven solutions. Eager
+                    to apply my skills in real-world projects and internships, I am continually learning new
+                    technologies to stay current in this fast-evolving field. I'm enthusiastic about contributing to
+                    innovative software solutions and improving user experiences.</p>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <div class="degree">
+                    <h3>COMSATS University Islamabad, Lahore Campus</h3>
+                    <p>Bachelors in Software Engineering - CGPA: 3.57</p>
+                </div>
+                <div class="degree">
+                    <h3>PUNJAB Group of Colleges, Main Campus</h3>
+                    <p>FSc (Pre Medical) - 925/1100</p>
+                </div>
+                <div class="degree">
+                    <h3>A.M.S High School, Lahore</h3>
+                    <p>Matriculation (Bio Sciences) - 1045/1100</p>
+                </div>
+            </section>
+
+            <section class="achievements">
+                <h2>Achievements & Certificates</h2>
+                <ul>
+                    <li>Compering Annual Ceremony</li>
+                    <li>Debate Winner</li>
+                    <li>Advanced Computer Operating - Al-Syed Computer College (2019)</li>
+                    <li>Graphics Designing - Al-Syed Computer College (2023)</li>
+                </ul>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>
